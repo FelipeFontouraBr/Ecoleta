@@ -1,6 +1,7 @@
 
 :root { /* : siginifica acessar a raiz do documento*//*Propriedades repetidas, vamos colocar em formatdo de variaveis*/
     --title-color: #322153; /*Posso usar essa variavel no documento todo, caso queira mudar a cor dos elementos que possuem ela, pode alterar essa variavel*/
+    --primary-color: #34cb79;
 }
 
 * { /*Atalho para todos seletores*/
