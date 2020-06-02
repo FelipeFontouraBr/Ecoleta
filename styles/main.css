@@ -104,5 +104,8 @@ h1, h2, h3, h4, h5 {
     width: 72px;
     height: 72px;
     border-top-left-radius: 8px; /*Arrumar borda da esquerda que não funcinou quando passamos o border no link*/
+    border-bottom-left-radius: 8px;
     background-color: rgba(0, 0, 0, 0.08);
 }
+
+/*Pseudo element: Não existem no html e vamos criar no CSS*/
