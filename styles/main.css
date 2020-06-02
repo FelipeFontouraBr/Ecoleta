@@ -69,3 +69,9 @@ h1, h2, h3, h4, h5 {
 #page-home main h1 {
     font-size: 54px; /*Tamanho da font*/
 }
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px; /*Altura da linha do texto*/
+    margin-top: 24px;
+}
