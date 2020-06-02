@@ -12,6 +12,10 @@ body {
 a {
     text-decoration: none;
 }
+h1, h2, h3, h4, h5 {
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif; /*Font from google.fonts*/
+}
 /*BOX MODEL*/
 
 #page-home {
@@ -53,5 +57,4 @@ a {
 
 #page-home main h1 {
     font-size: 54px; /*Tamanho da font*/
-    color: var(--title-color);
 }
