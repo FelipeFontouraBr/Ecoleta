@@ -4,6 +4,9 @@ html {
 body {
     background: #f0f0f5;
 }
+a {
+    text-decoration: none;
+}
 /*BOX MODEL*/
 
 #page-home {
@@ -27,7 +30,7 @@ body {
 #page-home header a { /*Por conta que tirou o display inline do span, vamos fazer esse ajuste no "a" antes*/
     display: flex; /*Colocando isso, vamos indicar que os elementos ficarão na mesma linha*/
     color: #322153;
-    font-weight: 700; /*Peso da font, utilizando a font Roboto*/
+    font-weight: 700; /*Peso da font, utilizando a font Roboto*/    
 }
 
 #page-home header a span {
