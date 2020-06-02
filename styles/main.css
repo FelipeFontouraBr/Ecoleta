@@ -2,7 +2,10 @@
 :root { /* : siginifica acessar a raiz do documento*//*Propriedades repetidas, vamos colocar em formatdo de variaveis*/
     --title-color: #322153; /*Posso usar essa variavel no documento todo, caso queira mudar a cor dos elementos que possuem ela, pode alterar essa variavel*/
 }
-
+* { /*Atalho para todos seletores*/
+    margin: 0;
+    padding: 0;
+}
 html {
     font-family: 'Roboto', sans-serif;
 }
