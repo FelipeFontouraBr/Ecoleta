@@ -1,7 +1,9 @@
 html {
     font-family: 'Roboto', sans-serif;
 }
-
+body {
+    background: #f0f0f5;
+}
 /*BOX MODEL*/
 
 #page-home {
