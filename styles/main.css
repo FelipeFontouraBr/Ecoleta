@@ -11,6 +11,7 @@ html {
 }
 body {
     background: #f0f0f5;
+    --webkit-font-smoothing: antiliased;/*A font fica mais amigável*/
 }
 a {
     text-decoration: none;
