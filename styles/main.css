@@ -80,3 +80,10 @@ h1, h2, h3, h4, h5 {
     line-height: 38px; /*Altura da linha do texto*/
     margin-top: 24px;
 }
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+
+    background: ;
+}
