@@ -1,3 +1,10 @@
 html {
     font-family: 'Roboto', sans-serif;
 }
+
+/*BOX MODEL*/
+header {
+    display: flex;
+    align-items: center;/*Alinhamento no eixo x*/
+    justify-content: space-between; /*Justificar o conteudo de dentro, colocando um espaço entre eles*/     
+}
