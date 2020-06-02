@@ -24,3 +24,13 @@ body {
     justify-content: space-between; /*Justificar o conteudo de dentro, colocando um espaço entre eles*/     
 }
 
+#page-home header a { /*Por conta que tirou o display inline do span, vamos fazer esse ajuste no "a" antes*/
+    display: flex; /*Colocando isso, vamos indicar que os elementos ficarão na mesmoa linha*/
+}
+
+#page-home header a span {
+    display: flex; /*Esse display irá funcionar para mostrar*/
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+}
