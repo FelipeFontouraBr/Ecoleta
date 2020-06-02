@@ -8,3 +8,9 @@ header {
     align-items: center;/*Alinhamento no eixo x*/
     justify-content: space-between; /*Justificar o conteudo de dentro, colocando um espaço entre eles*/     
 }
+
+.content {
+    width: 90%; /*Faz um calculo de 90% da página e deixa o tamanho automatico*/
+    max-width: 1100px; /*Mais que esse valor não é para rodar*/
+    margin: 0 auto; /*Top e Button=0 e left e right=auto
+}
