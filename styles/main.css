@@ -85,6 +85,15 @@ h1, h2, h3, h4, h5 {
 #page-home main a {
     width: 100%;
     max-width: 360px;
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; /*Pega tudo que tem la dentro e alinha ao centro*/
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    transition: 400ms;
+}
 
-    background: ;
+#page-home main a:hover {
+    background-color: #2fb86e;
 }
