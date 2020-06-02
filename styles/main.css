@@ -106,6 +106,16 @@ h1, h2, h3, h4, h5 {
     border-top-left-radius: 8px; /*Arrumar borda da esquerda que não funcinou quando passamos o border no link*/
     border-bottom-left-radius: 8px;
     background-color: rgba(0, 0, 0, 0.08);
+    display: flex; /*Colocamos display flex para aparecer o botão de pesquisar*/
+    align-items: center;
+    justify-content: center;
 }
 
 /*Pseudo element: Não existem no html e vamos criar no CSS*/
+#page-home main a span::after {
+    content: ""; /*Temos uma content nesse span*/
+    background-image: url('../assets/search.svg');/*Adicionamos uma imagem a esse span*/
+    /*Caso a imagem não aparece, é porque falta colocar as informações abaixo: */
+    width: 20px;
+    height: 20px;
+}
