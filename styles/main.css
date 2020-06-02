@@ -92,8 +92,17 @@ h1, h2, h3, h4, h5 {
     margin-top: 40px;
     background-color: var(--primary-color);
     transition: 400ms;
+    font-weight: bold; /*Peso da font, pode ser o numero (700) pego do google.fonts ou escrever bold(negrito)*/
+    color: white;
 }
 
 #page-home main a:hover {
     background-color: #2fb86e;
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px; /*Arrumar borda da esquerda que não funcinou quando passamos o border no link*/
+    background-color: rgba(0, 0, 0, 0.08);
 }
