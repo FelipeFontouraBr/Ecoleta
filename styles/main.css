@@ -1,3 +1,8 @@
+
+:root { /* : siginifica acessar a raiz do documento*//*Propriedades repetidas, vamos colocar em formatdo de variaveis*/
+    --title-color: #322153; /*Posso usar essa variavel no documento todo, caso queira mudar a cor dos elementos que possuem ela, pode alterar essa variavel*/
+}
+
 html {
     font-family: 'Roboto', sans-serif;
 }
@@ -22,6 +27,7 @@ a {
 }
 
 #page-home header {
+    margin-top: 48px;
     display: flex;
     align-items: center;/*Alinhamento no eixo x*/
     justify-content: space-between; /*Justificar o conteudo de dentro, colocando um espaço entre eles*/     
@@ -29,7 +35,7 @@ a {
 
 #page-home header a { /*Por conta que tirou o display inline do span, vamos fazer esse ajuste no "a" antes*/
     display: flex; /*Colocando isso, vamos indicar que os elementos ficarão na mesma linha*/
-    color: #322153;
+    color: var(--title-color);
     font-weight: 700; /*Peso da font, utilizando a font Roboto*/    
 }
 
@@ -39,4 +45,13 @@ a {
     background-image: url('../assets/log-in.svg');
     width: 20px;
     height: 20px;
+}
+
+#page-home main {
+    max-width: 560px;
+}
+
+#page-home main h1 {
+    font-size: 54px; /*Tamanho da font*/
+    color: var(--title-color);
 }
