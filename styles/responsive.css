@@ -34,6 +34,6 @@
 
 @media (max-height: 760px) {
     #page-home {
-        background-position-y: 200px; /*Mudar eixo Y, o Y estavam em buttom, portanto, deixar bottom*/
+        background-position-y: 130px; /*Mudar eixo Y, o Y estavam em buttom, portanto, deixar bottom*/
     }
 }
