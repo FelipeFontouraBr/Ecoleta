@@ -126,28 +126,3 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
-/*Responsive-Page*/
-/*Media conjunto de regras*/
-@media (max-width: 900px) { /*Quando a tela for no maximo 900px de largura, tera a seguinte regras: */
-    #page-home {
-        background-position-x: 70vw; /*A posição anterior estava em 35vw*//*A imagem some, para o conteudo não ficar encavalado*/
-    }
-
-    #page-home .content {
-        align-items: center;
-        text-align: center;
-    }
-    
-    #page-home header a {
-        position: absolute;
-        bottom: 48px;
-
-        /*Alinhamento centralizando elemento*/
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    #page-home main {
-        align-items: center; /*Centralização*/
-    }
-}
