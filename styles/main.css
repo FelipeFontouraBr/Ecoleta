@@ -139,5 +139,9 @@ h1, h2, h3, h4, h5 {
     #page-home header a {
         position: absolute;
         bottom: 48px;
+
+        /*Alinhamento centralizando elemento*/
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
