@@ -1,5 +1,6 @@
 /*Responsive-Page*/
 /*Media conjunto de regras*/
+
 @media (max-width: 900px) { /*Quando a tela for no maximo 900px de largura, tera a seguinte regras: */
     #page-home {
         background-position-x: 70vw; /*A posição anterior estava em 35vw*//*A imagem some, para o conteudo não ficar encavalado*/
@@ -21,5 +22,18 @@
 
     #page-home main {
         align-items: center; /*Centralização*/
+    }
+}
+
+/*Tela com largura de 1700 para cima*/
+@media (min-width: 1700px) {
+    #page-home {
+        background-position-x: 40vw;
+    }
+}
+
+@media (max-height: 760px) {
+    #page-home {
+        background-position-y: 200px; /*Mudar eixo Y, o Y estavam em buttom, portanto, deixar bottom*/
     }
 }
