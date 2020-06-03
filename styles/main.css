@@ -132,10 +132,12 @@ h1, h2, h3, h4, h5 {
     #page-home {
         background-position-x: 70vw; /*A posição anterior estava em 35vw*//*A imagem some, para o conteudo não ficar encavalado*/
     }
+
     #page-home .content {
         align-items: center;
         text-align: center;
     }
+    
     #page-home header a {
         position: absolute;
         bottom: 48px;
