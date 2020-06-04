@@ -26,3 +26,12 @@
     width: 20px;
     height: 24px;
 }
+
+/*Style to Form*/
+form {
+    background-color: white;
+    margin-top: 80px;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 730px;
+}
