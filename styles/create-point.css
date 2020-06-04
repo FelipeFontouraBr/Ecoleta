@@ -37,3 +37,21 @@ form {
     border-radius: 8px;
     max-width: 730px;
 }
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0px; /*Tira borda padrão do fieldset*/
+
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
