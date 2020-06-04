@@ -15,6 +15,8 @@
 #page-create-point header a {
     color: var(--title-color);
     font-weight: bold;
+    display: flex; /*Dentro do a, tem o span e o texto e vamos alinhar um ao lado do outro com display: flex*/
+    align-items: center; /*Elementos se alinharem ao centro*/
 }
 
 #page-create-point header a span {
