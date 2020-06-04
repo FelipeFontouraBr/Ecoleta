@@ -24,5 +24,5 @@
     background-image: url('../assets/arrow-left.svg'); /*Para imagem funcionar precisa determinar as propriedades abaixo*/
     display: flex;
     width: 20px;
-    height: 20px;
+    height: 24px;
 }
