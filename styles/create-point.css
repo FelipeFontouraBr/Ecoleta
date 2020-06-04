@@ -20,6 +20,7 @@
 }
 
 #page-create-point header a span {
+    margin-right: 16px;
     background-image: url('../assets/arrow-left.svg'); /*Para imagem funcionar precisa determinar as propriedades abaixo*/
     display: flex;
     width: 20px;
