@@ -57,7 +57,12 @@ form legend h2 {
 }
 
 form .field {
+    
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
+}
+
+form .field-group {
+    display: flex;
 }
