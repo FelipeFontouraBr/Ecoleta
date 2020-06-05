@@ -81,3 +81,12 @@ form select {
     -moz-appearance: none;
     appearance: none;
 }
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field { /*Esta referenciando o field "Endereço" + field "Número/Complemento", porém esta sendo aplicado no 2ºfield*/
+    margin-left: 24px;
+}
