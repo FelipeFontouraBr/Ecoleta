@@ -57,7 +57,7 @@ form legend h2 {
 }
 
 form .field {
-    
+    flex: 1; /*Estica o elemento*/
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
@@ -65,4 +65,13 @@ form .field {
 
 form .field-group {
     display: flex;
+}
+
+form input, form select {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline-color: #34CB79; /*Focus do campo*/
 }
