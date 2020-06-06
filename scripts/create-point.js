@@ -32,12 +32,16 @@ function getCities(event) { //getCities é chamado toda vez que troco o uf (esta
 
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios` //URL de mandeira dinamica, mudou o ufValue irá mudar o url
 
+    citySelect.innerHTML = "<option value>Selecione a Cidade</option>"//Antes de fazer a chamada para cidades, limpamos "" o campo antes de gerar novas cidades ou troca o conteudo interno, mudando para o texto <option value>Selecione a cidade</option>
+    citySelect.disabled = true //Irá bloquear o campo
+
     //Transformação dos dados:
     fetch(url)
     .then( res => res.json() ) //Transformou os dados em json
-    .then( cities => { //Vai retornar os estados
+    .then( cities => { //Vai retornar as cidades
+        
         for( const city of cities) { //city: cidade de cada cities (cidades de cada estado)
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>` //Nessa lógica que adicionamos uma cidade nova
         }    
     //Habilitar o select do campo "cidade":
     citySelect.disabled = false
