@@ -48,6 +48,20 @@ function getCities(event) { //getCities é chamado toda vez que troco o uf (esta
     })
 }
 
+//Adicionamos um ouvidor de evento a apenas um elemento (uf)
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
+
+//ITENS DE COLETA
+//Pegar todos os li
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+//Estrutura de repetição
+for (const item of itemsToCollect) { //Para cada um dos itens, vamos adicionar um ouvidor de evento:
+    item.addEventListener("click", handleSelectedItem)
+}
+
+function handleSelectedItem(event) {
+    console.log(event.target)
+}
