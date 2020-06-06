@@ -127,4 +127,5 @@ form button:hover {
     align-items: center;
     justify-content: space-between; /*Espaço entre elemento, porém no sentido vertical por ter colocado flex-direction: column*/
     text-align: center; /*Alinhamento do texto no centro*/
+    cursor: pointer; /*Faz o cursor mudar para mão*/
 }
