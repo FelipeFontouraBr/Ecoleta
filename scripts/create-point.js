@@ -20,10 +20,16 @@ function populateUFs() {
 populateUFs()
 
 //Cidades
-function getCities(event) {
+function getCities(event) { //getCities é chamado toda vez que troco o uf (estado)
     const citySelect = document.querySelector("select[name=city]") //Pegar as cidades
+    const stateInput = document.querySelector("input[name=state]")
 
     const ufValue = event.target.value
+
+    //A seguir configuramos o link que irá aparecer
+    const indexOfSelectedState = event.target.selectedIndex//Qual o numero do estado selecionado
+    stateInput.value = event.target.options[indexOfSelectedState].text //O valor dele será atualizado com o event.target (que é o select) e vamos pegar todos os options que é um array de 0 a 26 estados/ Vamos precisar saber qual option esta selecioando para pegar o texto dele
+
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios` //URL de mandeira dinamica, mudou o ufValue irá mudar o url
 
     //Transformação dos dados:
