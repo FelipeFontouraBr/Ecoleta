@@ -129,3 +129,11 @@ form button:hover {
     text-align: center; /*Alinhamento do texto no centro*/
     cursor: pointer; /*Faz o cursor mudar para mão*/
 }
+
+.items-grid li span {
+    margin-top: 12px;
+    flex: 1; /*Preenchimento sozinho*/
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
