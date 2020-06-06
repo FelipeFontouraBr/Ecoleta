@@ -112,4 +112,9 @@ form button:hover {
 .items-grid {
     display: grid; /*Grid pode fazer linhas e colunas*/
     grid-template-columns: 1fr 1fr 1fr;/*Adicionamos 3 colunas*/ 
+    gap: 16px;/*Margem entre as colunas*/
+}
+
+.items-grid li { /*Para cada item*/
+    background-color: #f5f5f5; 
 }
