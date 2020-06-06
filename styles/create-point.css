@@ -142,3 +142,9 @@ form button:hover {
     background: #e1faec;
     border: 2px solid #34cb79;
 }
+
+/*Para img e span do items não irá ter pointer-events*/
+.items-grid li img, 
+.items-grid li span {
+    pointer-events: none; 
+}
