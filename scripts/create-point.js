@@ -31,8 +31,10 @@ function getCities(event) {
     .then( res => res.json() ) //Transformou os dados em json
     .then( cities => { //Vai retornar os estados
         for( const city of cities) { //city: cidade de cada cities (cidades de cada estado)
-            ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
-        }        
+            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+        }    
+    //Habilitar o select do campo "cidade":
+    citySelect.disabled = false
     })
 }
 
