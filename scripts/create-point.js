@@ -41,7 +41,7 @@ function getCities(event) { //getCities é chamado toda vez que troco o uf (esta
     .then( cities => { //Vai retornar as cidades
         
         for( const city of cities) { //city: cidade de cada cities (cidades de cada estado)
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>` //Nessa lógica que adicionamos uma cidade nova
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>` //Nessa lógica que adicionamos uma cidade nova
         }    
     //Habilitar o select do campo "cidade":
     citySelect.disabled = false
