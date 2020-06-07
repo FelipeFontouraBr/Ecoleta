@@ -83,10 +83,20 @@ function handleSelectedItem(event) {
         const itemFound = item == itemId//Encontrei o item, se o item for igual ao itemId /return é sempre tru or false
         return itemFound
     }) 
-    
-//Se já estiver selecionado, tirar da seleção
-    
-//Se não estiver selecionado, adicionar à seleção
+
+//Se já estiver selecionado:
+    if( alreadySelected >= 0 ) {
+        //tirar da seleção:
+        const filteredItems = selectedItems.filter( item => {
+            //Caso retorne false, irá adicionar em um novo array na constante filteredItems:
+            const itemIsDifferent = item != itemId
+            return temIsDifferent
+        })
+        selectedItems = filteredItems //Pego o valor dos itens selecionados e coloque o valor dos itens filtrados
+    } else { //Se não estiver selecionado, adicionar à seleção
+
+    }
+
 //Atualizar o campo escondido com os itens selecionados 
 
     
