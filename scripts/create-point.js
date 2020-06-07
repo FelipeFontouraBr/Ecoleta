@@ -66,8 +66,10 @@ function handleSelectedItem(event) {
     const itemLi = event.target //salvo o target de cada li dentro de uma variavel
 
     //Add or remove uma classe com JavaScript
-
+    //Se fosse adicionar: itemLi.classList.add("selected")
+    //Se fosse remover: itemLi.classList.remove("selected")
+    itemLi.classList.toggle("selected") //toggle faz adiciona ou remove. Explicação: Na lista de classe (classList) existe selected? Existe! Então irá remover. Não existe! Então irá adicionar //Resumindo, clica e desclica focus no elemento
 
     const itemId = itemLi.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável
-    console.log(event.target)
+    
 }
