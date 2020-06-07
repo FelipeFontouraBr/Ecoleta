@@ -63,6 +63,11 @@ for (const item of itemsToCollect) { //Para cada um dos itens, vamos adicionar u
 }
 
 function handleSelectedItem(event) {
-    const itemId = event.target.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável
+    const itemLi = event.target //salvo o target de cada li dentro de uma variavel
+
+    //Add or remove uma classe com JavaScript
+
+
+    const itemId = itemLi.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável
     console.log(event.target)
 }
