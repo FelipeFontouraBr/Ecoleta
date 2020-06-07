@@ -53,6 +53,7 @@ document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
 
+
 //ITENS DE COLETA
 //Pegar todos os li
 const itemsToCollect = document.querySelectorAll(".items-grid li")
@@ -62,6 +63,10 @@ for (const item of itemsToCollect) { //Para cada um dos itens, vamos adicionar u
     item.addEventListener("click", handleSelectedItem)
 }
 
+
+//LÓGICA PARA GUARDAR OS ITENS SELECIONADOS PARA INFORMAR NO BANCO DE DADOS
+let selectedItems = [] //Desse array vou tirar ou adicionar um item, ele começa vazio.
+
 function handleSelectedItem(event) {
     const itemLi = event.target //salvo o target de cada li dentro de uma variavel
 
@@ -70,6 +75,19 @@ function handleSelectedItem(event) {
     //Se fosse remover: itemLi.classList.remove("selected")
     itemLi.classList.toggle("selected") //toggle faz adiciona ou remove. Explicação: Na lista de classe (classList) existe selected? Existe! Então irá remover. Não existe! Então irá adicionar //Resumindo, clica e desclica focus no elemento
 
-    const itemId = itemLi.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável
+    const itemId = itemLi.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável. Ou seja, quando clico, jogo o id dentro dessa variavel
+
+    
+//Verificar se existem itens selecionados, se sim, pegar os itens selecionados
+    const alreadySelected = seletedItems.findIndex(function(item) { //findIndex irá receber uma função curta
+        const itemFound = item == itemId//Encontrei o item, se o item for igual ao itemId /return é sempre tru or false
+        return itemFound
+    }) 
+//Se já estiver selecionado, tirar da seleção
+    
+//Se não estiver selecionado, adicionar à seleção
+//Atualizar o campo escondido com os itens selecionados 
+
+    
     
 }
