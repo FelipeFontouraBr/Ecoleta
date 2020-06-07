@@ -79,7 +79,7 @@ function handleSelectedItem(event) {
 
     
 //Verificar se existem itens selecionados, se sim, pegar os itens selecionados
-    const alreadySelected = seletedItems.findIndex(item => { //findIndex irá receber uma função curta
+    const alreadySelected = selectedItems.findIndex(item => { //findIndex irá receber uma função curta
         const itemFound = item == itemId//Encontrei o item, se o item for igual ao itemId /return é sempre tru or false
         return itemFound
     }) 
@@ -90,12 +90,13 @@ function handleSelectedItem(event) {
         const filteredItems = selectedItems.filter( item => {
             //Caso retorne false, irá adicionar em um novo array na constante filteredItems:
             const itemIsDifferent = item != itemId
-            return temIsDifferent
+            return itemIsDifferent
         })
         selectedItems = filteredItems //Pego o valor dos itens selecionados e coloque o valor dos itens filtrados
-    } else { //Se não estiver selecionado, adicionar à seleção
-
+    } else { //Se não estiver selecionado, adicionar à seleção:
+        selectedItems.push(itemId)//Adicionar um elemento dentro de um array
     }
+    console.log(selectedItems)
 
 //Atualizar o campo escondido com os itens selecionados 
 
