@@ -79,10 +79,11 @@ function handleSelectedItem(event) {
 
     
 //Verificar se existem itens selecionados, se sim, pegar os itens selecionados
-    const alreadySelected = seletedItems.findIndex(function(item) { //findIndex irá receber uma função curta
+    const alreadySelected = seletedItems.findIndex(item => { //findIndex irá receber uma função curta
         const itemFound = item == itemId//Encontrei o item, se o item for igual ao itemId /return é sempre tru or false
         return itemFound
     }) 
+    
 //Se já estiver selecionado, tirar da seleção
     
 //Se não estiver selecionado, adicionar à seleção
