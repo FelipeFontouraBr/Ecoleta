@@ -65,6 +65,7 @@ for (const item of itemsToCollect) { //Para cada um dos itens, vamos adicionar u
 
 
 //LÓGICA PARA GUARDAR OS ITENS SELECIONADOS PARA INFORMAR NO BANCO DE DADOS
+const collectedItems = document.querySelector("input[name=items]") //Irá inicar vazio
 let selectedItems = [] //Desse array vou tirar ou adicionar um item, ele começa vazio.
 
 function handleSelectedItem(event) {
@@ -98,7 +99,8 @@ function handleSelectedItem(event) {
     }
     console.log(selectedItems)
 
-//Atualizar o campo escondido com os itens selecionados 
+//Atualizar o campo escondido com os itens selecionados
+collectesItems.value = selectedItems
 
     
     
