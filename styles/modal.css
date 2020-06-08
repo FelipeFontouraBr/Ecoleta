@@ -11,6 +11,10 @@
     transition: 400ms; /*Quando ele aparecer suave*/
 }
 
+#modal.hide {
+    display: none;
+}
+
 #modal .content {
     color: white;
     width: 420px;
