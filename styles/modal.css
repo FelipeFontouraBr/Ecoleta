@@ -1,8 +1,24 @@
 #modal {
-    background-color: #0E0A14;
+    background-color: #0E0A14ef;
     height: 100vh;
     width: 100vw;
     position: fixed;
     top: 0;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms; /*Quando ele aparecer suave*/
+}
+
+#modal .content {
+    color: white;
+    width: 420px;
+
+}
+
+#modal .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
