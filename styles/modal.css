@@ -66,3 +66,7 @@
     border: 0;
     border-radius: 0 8px 8px 0; /*Junta o input*/
 }
+
+#modal form button:hover {
+    background-color: #2fb85e;
+}
