@@ -23,6 +23,18 @@
     #page-home main {
         align-items: center; /*Centralização*/
     }
+
+
+    /*Img responsiva da pagina search-results: */
+    #page-search-results .cards {
+        /*align-items: center; ou a opção abaixo*/
+        grid-template-columns: 1fr; /*Uma coluna apenas*/
+    }
+
+    /*Tela menores, a imagem terá esse tamanho: */
+    #page-search-results .cards img {
+        height: 200px;
+    }
 }
 
 /*Tela com largura de 1700 para cima*/
