@@ -1,0 +1,52 @@
+#page-search-results {
+    width: 90%;
+    max-width: 1100px;
+
+    /*Alinhamento de caixa (pelo lado de fora da caixa)*/
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex; /*Dentro do a, tem o span e o texto e vamos alinhar um ao lado do outro com display: flex*/
+    align-items: center; /*Elementos se alinharem ao centro*/
+}
+
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg'); /*Para imagem funcionar precisa determinar as propriedades abaixo*/
+    display: flex;
+    width: 20px;
+    height: 24px;
+}
+
+main {
+    margin-top: 48px;
+
+}
+
+main h4 {
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+
+    margin-bottom: 32px;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*3 Colunas*/
+    gap: 24px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
