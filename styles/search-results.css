@@ -42,11 +42,17 @@ main h4 {
 
 main .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /*3 Colunas*/
+    grid-template-columns: 1fr 1fr 1fr; /*3 colunas*/    
     gap: 24px;
 }
 
-main img {
+/*Configuração da imaem*/
+main .card img {
     width: 100%;
-    height: auto;
+    height: 150px; /*Antes estava alto*/
+    border-radius: 8px 8px 0 0;
+}
+
+main .card h1 {
+    
 }
