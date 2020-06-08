@@ -22,3 +22,10 @@
     align-items: center;
     justify-content: space-between;
 }
+
+#modal .header a {
+    background-image: url(../assets/x.svg);
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
