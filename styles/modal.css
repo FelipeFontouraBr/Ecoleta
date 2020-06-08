@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 48px;
 }
 
 #modal .header a {
@@ -28,4 +29,18 @@
     width: 20px;
     height: 20px;
     display: flex;
+    font-size: 0.01px;
+}
+
+#modal .header h1 {
+    color: white;
+    font-size: 36px;
+    line-height: 42px;    
+}
+
+#modal form label {
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    margin-bottom: 8px;
 }
