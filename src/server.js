@@ -16,12 +16,18 @@ nunjucks.configure("src/views", { //Pasta de html para configurarmos
 //req: Requisição
 //res: Resposta
 server.get("/", (req, res) => { //Get é um verbo de http 
-    res.sendFile(__dirname + "/views/index.html") //dirname é o nome do diretório
+    //Antes de instalar o nunjucks:
+    //res.sendFile(__dirname + "/views/index.html") //dirname é o nome do diretório
+    //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
+    res.render("index.html")
 })
 
 //Rota /Create-point:
 server.get("/create-point", (req, res) => { 
-    res.sendFile(__dirname + "/views/create-point.html") 
+    //Antes de instalar o nunjucks:
+    //res.sendFile(__dirname + "/views/create-point.html")
+    //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
+    res.render("create-point.html") 
 })
 
 
