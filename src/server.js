@@ -19,7 +19,7 @@ server.get("/", (req, res) => { //Get é um verbo de http
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/index.html") //dirname é o nome do diretório
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
-    return res.render("index.html") //{ title: "Um título" })//o "res" entende que irá passar pelo motor do nunjucks o index.html e irá retornar/o 2ªelement é 1 objeto    
+    return res.render("index.html", { title: "Um título" })//o "res" entende que irá passar pelo motor do nunjucks o index.html e irá retornar/o 2ªelement é 1 objeto    
 })
 
 //Rota /Create-point:
