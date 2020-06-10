@@ -4,6 +4,12 @@ const server = express()//Executar o express
 //Configuração da pasta public 
 server.use(express.static("public")) //Configuração da pasta public para que apareça as paginas dentro dela
 
+//Utilizando template engine
+const nunjucks = require("nunjucks") //Pedindo uma depedencia ja instalado no npm
+nunjucks.configure("src/views", { //Pasta de html para configurarmos
+    express: server,
+    noCache: true//Sem cache
+})  
 
 //Configuração das rotas/caminhos da aplicação
 //Rota "Home", página inicial.
