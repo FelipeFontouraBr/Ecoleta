@@ -1,0 +1,1 @@
+const express = require("express") //Iniciar o servidor, irá pedir o express e salvar nessa variável
