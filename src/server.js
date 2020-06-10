@@ -7,7 +7,7 @@ server.use(express.static("public")) //Configuração da pasta public para que a
 //Utilizando template engine
 const nunjucks = require("nunjucks") //Pedindo uma depedencia ja instalado no npm
 nunjucks.configure("src/views", { //Pasta de html para configurarmos
-    express: server,
+    express: server, //Ligamos o nunjucks ao express, dessa maneira as rotas funcionam: res.render("index.html")
     noCache: true//Sem cache
 })  
 
@@ -19,7 +19,7 @@ server.get("/", (req, res) => { //Get é um verbo de http
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/index.html") //dirname é o nome do diretório
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
-    res.render("index.html")
+    return res.render("index.html") //{ title: "Um título" })//o "res" entende que irá passar pelo motor do nunjucks o index.html e irá retornar/o 2ªelement é 1 objeto    
 })
 
 //Rota /Create-point:
@@ -27,7 +27,7 @@ server.get("/create-point", (req, res) => {
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/create-point.html")
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
-    res.render("create-point.html") 
+    return res.render("create-point.html") 
 })
 
 
