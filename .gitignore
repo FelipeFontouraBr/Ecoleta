@@ -1,16 +1,16 @@
 
-*.css
+.css
 *.svg
-*.html
-*.svg
-*.svg
+.html
+.svg
+.svg
 assets/arrow-left.svg
-*.css
-*.svg
-*.svg
-*.svg
+.css
+.svg
+.svg
+.svg
 assets/arrow-left.svg
-*.svg
-*.css
+.svg
+.css
 public/scripts/create-point.js
 public/scripts/index.js

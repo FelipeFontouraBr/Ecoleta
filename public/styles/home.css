@@ -1,0 +1,101 @@
+/*Styles to PageHome*/
+
+/*BOX MODEL*/
+
+#page-home {
+    height: 100vh; /*Vai ver pegar a altura e vai fazer altura "height", ficasse com 100*/
+    background: url('../assets/home-background.svg') no-repeat;
+    background-position: 35vw bottom; /*vw config. exio x (width) e bottom vai ficar colocado la embaixo*/
+}
+
+#page-home .content {
+    width: 90%; /*Faz um calculo de 90% da página e deixa o tamanho automatico*/
+    max-width: 1100px; /*Mais que esse valor não é para rodar*/
+    height: 100%;
+    margin: 0 auto; /*Top e Button=0 e left e right=auto*/
+    display: flex;
+    flex-direction: column; /*Direção do flex é coluna*/
+}
+
+#page-home header {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;/*Alinhamento no eixo x*/
+    justify-content: space-between; /*Justificar o conteudo de dentro, colocando um espaço entre eles*/     
+}
+
+#page-home header a { /*Por conta que tirou o display inline do span, vamos fazer esse ajuste no "a" antes*/
+    display: flex; /*Colocando isso, vamos indicar que os elementos ficarão na mesma linha*/
+    color: var(--title-color);
+    font-weight: 700; /*Peso da font, utilizando a font Roboto*/    
+}
+
+#page-home header a span {
+    margin-right: 16px;
+    display: flex; /*Esse display irá funcionar para mostrar*/
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main {
+    max-width: 560px;
+    flex: 1; /*Preenche todo o espaço que tiver*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1 {
+    font-size: 54px; /*Tamanho da font*/
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px; /*Altura da linha do texto*/
+    margin-top: 24px;
+}
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; /*Pega tudo que tem la dentro e alinha ao centro*/
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    transition: 400ms;
+    /*font-weight: bold; /*Peso da font, pode ser o numero (700) pego do google.fonts ou escrever bold(negrito)*/
+    /*color: white;*/
+}
+
+#page-home main a:hover {
+    background-color: #2fb86e;
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px; /*Arrumar borda da esquerda que não funcinou quando passamos o border no link*/
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+    display: flex; /*Colocamos display flex para aparecer o botão de pesquisar*/
+    align-items: center;
+    justify-content: center;
+}
+
+/*Pseudo element: Não existem no html e vamos criar no CSS*/
+#page-home main a span::after {
+    content: ""; /*Temos uma content nesse span*/
+    background-image: url('../assets/search.svg');/*Adicionamos uma imagem a esse span*/
+    /*Caso a imagem não aparece, é porque falta colocar as informações abaixo: */
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong {
+    flex: 1; /*Preenchimento automatico, ou seja, cresce toda a caixa no eixo x*/
+    color: white;
+    text-align: center;
+}
