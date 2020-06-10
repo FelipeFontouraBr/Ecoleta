@@ -12,5 +12,5 @@ assets/arrow-left.svg
 assets/arrow-left.svg
 .svg
 .css
-public/scripts/create-point.js
-public/scripts/index.js
+.public/scripts/create-point.js
+.public/scripts/index.js
