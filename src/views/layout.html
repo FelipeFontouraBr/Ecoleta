@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
+
+    {% block name %}
+        <title>Ecoleta</title>
+    {% endblock name %}
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
@@ -16,7 +19,8 @@
 </head>
 <body>
 
-    <div id="page-home">
+    {#A div abaixo era o id="page-home", mas adicionamos uma variavel de mesmo nome através do nunjucks#}
+    <div id="{{ bodyId }}">
 
     </div>
 
