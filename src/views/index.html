@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {#Irá pegar todo o conteudo do layout, através do nunjucks#}
+{% extends "layout.html" %}
+{#Irá pegar todo o conteudo do layout, através do nunjucks#}
 
 {#Toda parte de código que será substituida precisa estar dentro de um bloco de código, para que o extends leia#}
 
@@ -13,14 +14,15 @@
 {#Dentro do bloco quero colocar o que irá substituir#}
 {% block styles %}
     <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/modal.css">    
+    <link rel="stylesheet" href="styles/modal.css">
 {% endblock styles %}
 
 {#<div id="page-home" e a seguir o conteudo principal#}
 {% block content %}
     <div class="content">
         <header>
-            <img src="./assets/logo.svg" alt="Logomarca"> <!--Alt caso não carrega ira apresentar o texto logomarcar-->
+            <img src="./assets/logo.svg" alt="Logomarca">
+            <!--Alt caso não carrega ira apresentar o texto logomarcar-->
             <a href="/create-point">
                 <span></span>
                 Cadastre um ponto de coleta
@@ -28,10 +30,14 @@
         </header>
 
         <main>
-            <h1>Seu marketplace de coleta de resíduos</h1> <!--Variavel entre chaves criado apartir do nunjucks-->
+            <h1>Seu marketplace de coleta de resíduos</h1>
+            <!--Variavel entre chaves criado apartir do nunjucks-->
             <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-            <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
-        </main>        
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+        </main>
     </div>
 {% endblock content %}
 
@@ -44,4 +50,3 @@
 {% block scripts %}
     <script src="./scripts/index.js"></script>
 {% endblock scripts %}
-
