@@ -5,19 +5,19 @@
 {#Para criar uma variável com Id #}
 {% set bodyId = "page-home" %}
 
-    {#Title será dinamico#}
-    {% block name %}
-        <title>Ecoleta</title>
-    {% endblock name %}
+{#Title será dinamico#}
+{% block name %}
+    <title>Ecoleta</title>
+{% endblock name %}
 
-    {#Dentro do bloco quero colocar o que irá substituir#}
-    {% block styles %}
+{#Dentro do bloco quero colocar o que irá substituir#}
+{% block styles %}
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/modal.css">    
-    {% endblock styles %}
+{% endblock styles %}
 
-{#<div id="page-home" #}
-
+{#<div id="page-home" e a seguir o conteudo principal#}
+{% block content %}
     <div class="content">
         <header>
             <img src="./assets/logo.svg" alt="Logomarca"> <!--Alt caso não carrega ira apresentar o texto logomarcar-->
@@ -33,6 +33,8 @@
             <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
         </main>        
     </div>
+{% endblock content %}
+
 
 
 {% include "partials/modal.html" %}

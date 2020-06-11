@@ -21,8 +21,12 @@
 
     {#A div abaixo era o id="page-home", mas adicionamos uma variavel de mesmo nome através do nunjucks#}
     <div id="{{ bodyId }}">
-
+        {% block content %}
+        {% endblock content %}
     </div>
+
+    {% block modal %}
+    {% endblock modal %}
 
 </body>
 </html>
