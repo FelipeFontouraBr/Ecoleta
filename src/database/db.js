@@ -8,6 +8,20 @@ const sqlite3 = require("sqlite3").verbose() //Verbose: quero ver uma mensagem n
 const db = new sqlite3.Database("./src/database/database.db") //Irá criar um banco de dados no caminho que esta entre ()
 
 //Utilizar o objeto de banco de dados para nossas operações
-db.serialize(() => { //Ira rodar uma sequencia de códigos
-    //Criar uma tabela
+db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
+    
+    //com comandos sql:
+    //1-Criar uma tabela: (abaixo é um tamplate litius)
+    db.run(`
+        CREATE TABLE IF NOT EXISTS places ();    
+    `)
+
+
+
+    //2-Inserir dados na tabela 
+
+
+    //3-Consultar os dados da tabela
+
+    //4-Deletar um dado da tabela
 }) 
