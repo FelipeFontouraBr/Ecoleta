@@ -9,7 +9,7 @@ const nunjucks = require("nunjucks") //Pedindo uma depedencia ja instalado no np
 nunjucks.configure("src/views", { //Pasta de html para configurarmos
     express: server, //Ligamos o nunjucks ao express, dessa maneira as rotas funcionam: res.render("index.html")
     noCache: true//Sem cache
-})  
+})
 
 //Configuração das rotas/caminhos da aplicação
 //Rota "Home", página inicial.
@@ -23,16 +23,16 @@ server.get("/", (req, res) => { //Get é um verbo de http
 })
 
 //Rota /Create-point:
-server.get("/create-point", (req, res) => { 
+server.get("/create-point", (req, res) => {
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/create-point.html")
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
-    return res.render("create-point.html") 
+    return res.render("create-point.html")
 })
 
 //Rota /Search-results
-server.get("/search", (req, res) => { 
-    return res.render("search-results.html") 
+server.get("/search", (req, res) => {
+    return res.render("search-results.html")
 })
 
 //ligar o servidor
