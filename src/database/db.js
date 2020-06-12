@@ -6,3 +6,8 @@ const sqlite3 = require("sqlite3").verbose() //Verbose: quero ver uma mensagem n
 //Criar o objeto que irá fazer operações no Banco de Dados:
 //NEW inicia um novo objeto dentro de uma classe
 const db = new sqlite3.Database("./src/database/database.db") //Irá criar um banco de dados no caminho que esta entre ()
+
+//Utilizar o objeto de banco de dados para nossas operações
+db.serialize(() => { //Ira rodar uma sequencia de códigos
+    //Criar uma tabela
+}) 
