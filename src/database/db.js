@@ -16,6 +16,7 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             image TEXT,
+            name TEXT,
             address TEXT,
             address2 TEXT,
             state TEXT,
@@ -25,8 +26,13 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     `)
 
     //2-Inserir dados na tabela 
+    //Primeiro coloca os campos "places ()" e depois os valores "values ()"
     db.run(`
-            INSERT INTO places () VALUES ();
+            INSERT INTO places (
+                image, 
+                name,
+
+            ) VALUES ();
     `)
 
     //3-Consultar os dados da tabela
