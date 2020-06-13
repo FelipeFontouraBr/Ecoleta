@@ -17,7 +17,9 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             image TEXT,
             address TEXT,
-            address2 TEXT
+            address2 TEXT,
+            state TEXT,
+            
         );    
     `)
 
