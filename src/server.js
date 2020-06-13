@@ -1,6 +1,9 @@
 const express = require("express") //Iniciar o servidor, irá pedir o express e salvar nessa variável
 const server = express()//Executar o express
 
+//Pegar o banco de dados
+const db = require("./database/db")
+
 //Configuração da pasta public 
 server.use(express.static("public")) //Configuração da pasta public para que apareça as paginas dentro dela
 
