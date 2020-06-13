@@ -14,7 +14,8 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     //1-Criar uma tabela: (abaixo é um tamplate litius)
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
-            id INTEGER PRIMARY KEY
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            
         );    
     `)
 
