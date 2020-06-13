@@ -15,7 +15,7 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            
+            image TEXT,
         );    
     `)
 
