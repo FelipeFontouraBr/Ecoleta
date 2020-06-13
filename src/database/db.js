@@ -20,7 +20,7 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
             address2 TEXT,
             state TEXT,
             city TEXT,
-            
+            items TEXT
         );    
     `)
 
