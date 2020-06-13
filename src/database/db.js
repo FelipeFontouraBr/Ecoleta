@@ -38,7 +38,16 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
         items
     ) VALUES (?,?,?,?,?,?,?);
     `
-    db.run()
+    const values = [
+        "https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1401&q=80",
+        "Colectoria",
+        "Guilherme Gemballa, Jardim América",
+        "Número 260",
+        "Santa Catarina",
+        "Rio do Sul",
+        "Resíduos Eletrônicos Lâmpadas"
+    ]
+    db.run(query, )
 
     //3-Consultar os dados da tabela
 
