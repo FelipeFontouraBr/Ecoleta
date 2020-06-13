@@ -40,10 +40,10 @@ server.get("/search", (req, res) => {
         if (err) { //Esse é o tratamento do caminho do erro
             return console.log(err)
         }
-        console.log("Aqui estão seus registros: ")
-        console.log(rows)
+        //Mostrar a página html com os dados do banco de dados
+        return res.render("search-results.html", { places: rows })
     })
-    return res.render("search-results.html")
+    //return res.render("search-results.html")->colocamos dentro do código acima
 })
 
 //ligar o servidor
