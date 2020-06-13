@@ -24,10 +24,10 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
         );    
     `)
 
-
-
     //2-Inserir dados na tabela 
-
+    db.run(`
+            INSERT INTO places () VALUES ();
+    `)
 
     //3-Consultar os dados da tabela
 
