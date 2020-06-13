@@ -57,9 +57,14 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     }
 
     //afterInsertData é uma callback
-    db.run(query, values, afterInsertData)
+    //db.run(query, values, afterInsertData)
 
-    //3-Consultar os dados da tabela
+    //3-Consultar os dados da tabela PLACES (* -> significa acessar todos os campos da tabela)
+    db.all(`SELECT * FROM places`, function(err, rows){
+        if(err) { //Esse é o tratamento do caminho do erro
+            return console.log(err)
+        }
+    })
 
     //4-Deletar um dado da tabela
 }) 
