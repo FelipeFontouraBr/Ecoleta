@@ -31,7 +31,11 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
             INSERT INTO places (
                 image, 
                 name,
-
+                address,
+                address2,
+                state,
+                city,
+                items
             ) VALUES ();
     `)
 
