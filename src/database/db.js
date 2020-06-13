@@ -60,11 +60,22 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     //db.run(query, values, afterInsertData)
 
     //3-Consultar os dados da tabela PLACES (* -> significa acessar todos os campos da tabela)
+    //Se fosse trazer só os nomes does registros:  db.all(`SELECT name FROM places`, function(err, rows)
     db.all(`SELECT * FROM places`, function(err, rows){
         if(err) { //Esse é o tratamento do caminho do erro
             return console.log(err)
         }
+        console.log("Aqui estão seus registros: ")
+        console.log(rows)
     })
 
     //4-Deletar um dado da tabela
+    //Quando se usa uma ?, será colocado uma sequencia de interrogações. Nesse caso o valor dela é 1, pois só há um registro e o id é 1
+    //Explicação: Irá deletar da tabela onde o id é 1, e depois rodar um função callback para tratar erro
+    db.run(`DELETE FROM places WHERE id = ?`, [1], function(err) {
+        if(err) { 
+            return console.log(err)
+        }
+        console.log("Registro deletado com sucesso!)
+    })
 }) 
