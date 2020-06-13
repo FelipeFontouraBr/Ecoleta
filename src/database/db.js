@@ -83,4 +83,4 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     //        return console.log(err)
      //   }
     //    console.log("Registro deletado com sucesso!")
-       }) /*
+}) */

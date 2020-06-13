@@ -35,6 +35,14 @@ server.get("/create-point", (req, res) => {
 
 //Rota /Search-results
 server.get("/search", (req, res) => {
+    //Pegar os dados do banco de dados
+    db.all(`SELECT * FROM places`, function (err, rows) {
+        if (err) { //Esse é o tratamento do caminho do erro
+            return console.log(err)
+        }
+        console.log("Aqui estão seus registros: ")
+        console.log(rows)
+    })
     return res.render("search-results.html")
 })
 
