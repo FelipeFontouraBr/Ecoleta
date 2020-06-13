@@ -9,7 +9,7 @@ const db = new sqlite3.Database("./src/database/database.db") //Irá criar um ba
 
 //Utilizar o objeto de banco de dados para nossas operações
 db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
-    
+
     //com comandos sql:
     //1-Criar uma tabela: (abaixo é um tamplate litius)
     db.run(`
@@ -27,17 +27,18 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
 
     //2-Inserir dados na tabela 
     //Primeiro coloca os campos "places ()" e depois os valores "values ()"
-    db.run(`
-            INSERT INTO places (
-                image, 
-                name,
-                address,
-                address2,
-                state,
-                city,
-                items
-            ) VALUES ();
-    `)
+    const query = `
+    INSERT INTO places (
+        image, 
+        name,
+        address,
+        address2,
+        state,
+        city,
+        items
+    ) VALUES (?,?,?,?,?,?,?);
+    `
+    db.run()
 
     //3-Consultar os dados da tabela
 
