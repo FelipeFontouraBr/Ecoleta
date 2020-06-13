@@ -47,7 +47,13 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
         "Rio do Sul",
         "Resíduos Eletrônicos Lâmpadas"
     ]
-    db.run(query, )
+    db.run(query, values, function(err) {
+        if(err) {
+            return console.log(err)
+        }
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+    })
 
     //3-Consultar os dados da tabela
 
