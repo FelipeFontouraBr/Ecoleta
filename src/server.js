@@ -32,7 +32,7 @@ server.get("/", (req, res) => { //Get é um verbo de http
 //Rota que irá receber dados do formulário, através do req /Create-point:
 server.get("/create-point", (req, res) => {
     //req.query: Query Strings da nossa URL e consegue pegar as informações que estão la
-    console.log(req.query)
+    //console.log(req.query)
 
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/create-point.html")
@@ -43,8 +43,40 @@ server.get("/create-point", (req, res) => {
 server.post("/savepoint", (req, res) => {
 
     // req.body: O corpo do nosso formulário
-    console.log(req.body)
+    //console.log(req.body)
 
+    //Inserir dados no banco de dados
+    const query = `
+    INSERT INTO places (
+        image, 
+        name,
+        address,
+        address2,
+        state,
+        city,
+        items
+    ) VALUES (?,?,?,?,?,?,?);
+    `
+    const values = [
+        "https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        "Papersider",
+        "Guilherme Gemballa, Jardim América",
+        "Número 260",
+        "Santa Catarina",
+        "Rio do Sul",
+        "Resíduos Eletrônicos Lâmpadas"
+    ]
+
+    function afterInsertData(err) {
+        if(err) {
+            return console.log(err)
+        }
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+    }
+
+    //afterInsertData é uma callback
+    //db.run(query, values, afterInsertData)
 
     return res.send("ok")
 })
