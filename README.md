@@ -1,4 +1,6 @@
-<img alt="GitHub language count" src="https://github.com/FelipeFontouraBr/Ecoleta/blob/master/.github/ecoleta.png">
+<h1 align="center">
+    <img alt="GitHub language count" src="https://github.com/FelipeFontouraBr/Ecoleta/blob/master/.github/ecoleta.png">
+</h1>
  
 Project development (Web Application) based on the Starter Module, part of the week of Next Level Week (NLW), taught by Professor Mayk Brito and distributed by Rocketseat.
 
