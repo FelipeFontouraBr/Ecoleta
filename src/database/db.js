@@ -61,7 +61,7 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     }
 
     //afterInsertData é uma callback
-    db.run(query, values, afterInsertData)
+    //db.run(query, values, afterInsertData)
 
 
     //3-Consultar os dados da tabela PLACES (* -> significa acessar todos os campos da tabela)
@@ -77,10 +77,11 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     //4-Deletar um dado da tabela
     //Quando se usa uma ?, será colocado uma sequencia de interrogações. Nesse caso o valor dela é 1, pois só há um registro e o id é 1
     //Explicação: Irá deletar da tabela onde o id é 1, e depois rodar um função callback para tratar erro
-    //Para deletar algum dado, basta adicionar o id que quer deletar
-    //db.run(`DELETE FROM places WHERE id = ?`, [1], function(err) {
-    //  if(err) { 
-    //        return console.log(err)
-     //   }
-    //    console.log("Registro deletado com sucesso!")
-}) */
+    //Para deletar algum dado, basta adicionar o id que quer deletar e tirar do comentário (47:12 do video)
+    db.run(`DELETE FROM places WHERE id = ?`, [3], function(err) {
+      if(err) { 
+            return console.log(err)
+       }
+       console.log("Registro deletado com sucesso!")
+    })
+})*/
