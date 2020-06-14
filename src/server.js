@@ -92,7 +92,7 @@ server.get("/search", (req, res) => {
 
 
     //Pegar os dados do banco de dados
-    //Antes era: ity = '${search}', mas pega o valor correto digitado na cidade (tipo, Rio de Janeiro, se colocar só Rio não vai), então mudamos para "city LIKE '%${search}%'" pode vir um valor antes ou depois que esta correto
+    //Antes era: ity = '${search}', mas pega o valor correto digitado na cidade (tipo, Rio de Janeiro, se colocar só Rio não vai), então mudamos para "city LIKE '%${search}%'" pode vir um valor antes ou depois do 'Rio' que esta correto
     db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {
         if (err) { //Esse é o tratamento do caminho do erro
             console.log(err)
