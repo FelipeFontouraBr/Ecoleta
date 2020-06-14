@@ -37,7 +37,7 @@ server.get("/create-point", (req, res) => {
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/create-point.html")
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
-    return res.render("create-point.html", { saved: true})
+    return res.render("create-point.html")
 })
 //Usando o verbo POST e trocamos o caminho para savepoint ao inves de /create-point
 server.post("/savepoint", (req, res) => {
@@ -85,7 +85,8 @@ server.get("/search", (req, res) => {
     //Pegar os dados do banco de dados
     db.all(`SELECT * FROM places`, function (err, rows) {
         if (err) { //Esse é o tratamento do caminho do erro
-            return console.log(err)
+            console.log(err)
+            return res.send("Erro no cadastro!")
         }
         const total = rows.length
         //Mostrar a página html com os dados do banco de dados
