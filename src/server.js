@@ -92,7 +92,7 @@ server.get("/search", (req, res) => {
 
 
     //Pegar os dados do banco de dados
-    db.all(`SELECT * FROM places`, function (err, rows) {
+    db.all(`SELECT * FROM places WHERE city = '${search}'`, function (err, rows) {
         if (err) { //Esse é o tratamento do caminho do erro
             console.log(err)
             return res.send("Erro no cadastro!")
