@@ -82,6 +82,15 @@ server.post("/savepoint", (req, res) => {
 
 //Rota /Search-results
 server.get("/search", (req, res) => {
+
+    //Ver pontos cadastrados
+    const search = req.query.search
+    if(search == "") {
+        //pesquisa vazia
+        return res.render("search-results.html", { total: 0})
+    }
+
+
     //Pegar os dados do banco de dados
     db.all(`SELECT * FROM places`, function (err, rows) {
         if (err) { //Esse é o tratamento do caminho do erro
