@@ -4,8 +4,12 @@ const server = express()//Executar o express
 //Pegar o banco de dados
 const db = require("./database/db")
 
-//Configuração da pasta public 
+//Configuração da pasta public (.use é para isso, fazer a configuração)
 server.use(express.static("public")) //Configuração da pasta public para que apareça as paginas dentro dela
+
+//O express não roda o campo body da page, portanto:
+//Habilitar o uso do req.body na nossa aplicação
+server.use(express.urlencoded({ extended: true }))
 
 //Utilizando template engine
 const nunjucks = require("nunjucks") //Pedindo uma depedencia ja instalado no npm
@@ -37,6 +41,11 @@ server.get("/create-point", (req, res) => {
 })
 //Usando o verbo POST e trocamos o caminho para savepoint ao inves de /create-point
 server.post("/savepoint", (req, res) => {
+
+    // req.body: O corpo do nosso formulário
+    console.log(req.body)
+
+
     return res.send("ok")
 })
 
