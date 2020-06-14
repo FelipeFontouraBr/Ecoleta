@@ -25,8 +25,13 @@ server.get("/", (req, res) => { //Get é um verbo de http
     return res.render("index.html", { title: "Um título" })//o "res" entende que irá passar pelo motor do nunjucks o index.html e irá retornar/o 2ªelement é 1 objeto    
 })
 
-//Rota /Create-point:
+//Rota que irá receber dados do formulário, através do req /Create-point:
 server.get("/create-point", (req, res) => {
+    //req.query: Query Strings da nossa URL e consegue pegar as informações que estão la
+    console.log(req.query)
+
+    
+
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/create-point.html")
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:

@@ -9,7 +9,7 @@ function populateUFs() {
     const ufSelect = document.querySelector("select[name=uf]")
 
     fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
-        .then(res => res.json()) //Transformou os dados em json
+        .then(res => res.json() ) //Transformou os dados em json
         .then(states => { //Vai retornar os estados
             for (const state of states) {
                 ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
@@ -59,7 +59,7 @@ document
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
 //Estrutura de repetição
-for (const item of itemsToCollect) { //Para cada um dos itens, vamos adicionar um ouvidor de evento:
+for (const item of itemsToCollect) { //Para cada um dos itens, vamos adicionar um ouvidor de evento (callback) quando for clicar
     item.addEventListener("click", handleSelectedItem)
 }
 
@@ -78,6 +78,7 @@ function handleSelectedItem(event) {
 
     const itemId = itemLi.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável. Ou seja, quando clico, jogo o id dentro dessa variavel
 
+    console.log('ITEM ID: ', itemId)
 
     //Verificar se existem itens selecionados, se sim, pegar os itens selecionados
     const alreadySelected = selectedItems.findIndex(item => { //findIndex irá receber uma função curta
@@ -97,10 +98,10 @@ function handleSelectedItem(event) {
     } else { //Se não estiver selecionado, adicionar à seleção:
         selectedItems.push(itemId)//Adicionar um elemento dentro de um array
     }
-    console.log(selectedItems)
+    console.log('selectedItems', selectedItems)
 
     //Atualizar o campo escondido com os itens selecionados
-    collectesItems.value = selectedItems
+    collectedItems.value = selectedItems
 
 
 
