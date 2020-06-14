@@ -2,7 +2,7 @@
     <img alt="GitHub language count" src="https://github.com/FelipeFontouraBr/Ecoleta/blob/master/.github/ecoleta.png">
 </h1>
  
-Project development (Web Application) based on the Starter Module, part of the week of Next Level Week (NLW), taught by Professor Mayk Brito and distributed by Rocketseat.
+Project development (Web Application) based on the Starter Module, part of the week of Next Level Week (NLW), taught by Professor [Mayk Brito](https://github.com/maykbrito) and distributed by [Rocketseat](https://rocketseat.com.br/)
 
 The application is based on a waste collection market, where individuals and / or entities can register and / or find collection points.
 
