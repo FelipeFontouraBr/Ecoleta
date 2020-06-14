@@ -78,7 +78,7 @@ function handleSelectedItem(event) {
 
     const itemId = itemLi.dataset.id//colocamos o dataset.id (para pegar os numeros de id dos itens) dentro de uma variável. Ou seja, quando clico, jogo o id dentro dessa variavel
 
-    console.log('ITEM ID: ', itemId)
+    //console.log('ITEM ID: ', itemId)
 
     //Verificar se existem itens selecionados, se sim, pegar os itens selecionados
     const alreadySelected = selectedItems.findIndex(item => { //findIndex irá receber uma função curta
@@ -98,7 +98,7 @@ function handleSelectedItem(event) {
     } else { //Se não estiver selecionado, adicionar à seleção:
         selectedItems.push(itemId)//Adicionar um elemento dentro de um array
     }
-    console.log('selectedItems', selectedItems)
+    //console.log('selectedItems', selectedItems)
 
     //Atualizar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems

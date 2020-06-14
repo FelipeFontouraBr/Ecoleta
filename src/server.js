@@ -30,12 +30,14 @@ server.get("/create-point", (req, res) => {
     //req.query: Query Strings da nossa URL e consegue pegar as informações que estão la
     console.log(req.query)
 
-    
-
     //Antes de instalar o nunjucks:
     //res.sendFile(__dirname + "/views/create-point.html")
     //Após instalação do nunjucks, trocamos por render e como já le arquivos html, deixamos como string:
     return res.render("create-point.html")
+})
+//Usando o verbo POST e trocamos o caminho para savepoint ao inves de /create-point
+server.post("/savepoint", (req, res) => {
+    return res.send("ok")
 })
 
 //Rota /Search-results
