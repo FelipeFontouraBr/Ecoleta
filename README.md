@@ -1,4 +1,4 @@
-# Ecoleta :recycle:
+<img alt="GitHub language count" src="https://github.com/FelipeFontouraBr/Ecoleta/blob/master/.github/ecoleta.png">
  
 Project development (Web Application) based on the Starter Module, part of the week of Next Level Week (NLW), taught by Professor Mayk Brito and distributed by Rocketseat.
 
@@ -6,7 +6,7 @@ The application is based on a waste collection market, where individuals and / o
 
 ## Presentation
 
-<img alt="GitHub language count" src="">
+<img alt="Gif" src="https://github.com/FelipeFontouraBr/Ecoleta/blob/master/.github/ecoleta1.gif">
 
 ## Technologies
 
@@ -25,11 +25,11 @@ The application is based on a waste collection market, where individuals and / o
 
 ### API 
 
-:office: [Cities](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)
+[Cities](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet) :office: 
 
-:convenience_store: [States](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
+ [States](https://servicodados.ibge.gov.br/api/v1/localidades/estados) :convenience_store:
 
 ----
 For a more sustainable world :evergreen_tree: :green_heart:
 
-Learning and Developing - by Felipe Fontoura :computer: [See my linkedin!](https://www.linkedin.com/in/fontourafelipe/)
+Learning and Developing - by Felipe Fontoura - [See my linkedin!](https://www.linkedin.com/in/fontourafelipe/) :computer:
