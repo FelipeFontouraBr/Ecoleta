@@ -13,7 +13,7 @@ module.exports = db
 /*
 //Utilizar o objeto de banco de dados para nossas operações
 db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
-
+    
     //com comandos sql:
     //1-Criar uma tabela: (abaixo é um tamplate litius)
     db.run(`
@@ -78,7 +78,7 @@ db.serialize(() => { //Ira rodar uma sequencia de códigos - db é um objeto
     //Quando se usa uma ?, será colocado uma sequencia de interrogações. Nesse caso o valor dela é 1, pois só há um registro e o id é 1
     //Explicação: Irá deletar da tabela onde o id é 1, e depois rodar um função callback para tratar erro
     //Para deletar algum dado, basta adicionar o id que quer deletar e tirar do comentário (47:12 do video)
-    db.run(`DELETE FROM places WHERE id = ?`, [3], function(err) {
+    db.run(`DELETE FROM places WHERE id = ?`, [4], function(err) {
       if(err) { 
             return console.log(err)
        }
