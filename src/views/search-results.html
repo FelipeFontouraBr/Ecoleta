@@ -15,28 +15,36 @@
 
     <main>
 
-        <h4>
-            <strong>{{ total }} Pontos</strong>
-            encontrados
-        </h4>
+        {% if total > 0 %}
 
-        <div class="cards">
+            <h4>
+                <strong>{{ total }}
+                    Pontos</strong>
+                encontrados
+            </h4>
 
-            {#Estrutura de repetição, toda vez que inserir um dado apresentar o card com todas as informações, e abaixo são dados dinâmicos e vamos pegar um "place" de cada#}
-            {% for place in places %}
-                {#Para um local no nossos locais, irá rodar algumas vezes#}
-                <div class="card">
-                    <img src="{{ place.image }}" alt="{{ place.name }}">
-                    <h1>{{ place.name }}</h1>
-                    <h3>{{ place.items }}</h3>
-                    <p>{{ place.city }}, {{ place.state }}
-                        <br/>
-                        {{ place.address }}
-                        <br/>
-                        {{ place.address2 }}</p>
-                </div>
-            {% endfor %}
+            <div class="cards">
 
-        </div>
+                {#Estrutura de repetição, toda vez que inserir um dado apresentar o card com todas as informações, e abaixo são dados dinâmicos e vamos pegar um "place" de cada#}
+                {% for place in places %}
+                    {#Para um local no nossos locais, irá rodar algumas vezes#}
+                    <div class="card">
+                        <img src="{{ place.image }}" alt="{{ place.name }}">
+                        <h1>{{ place.name }}</h1>
+                        <h3>{{ place.items }}</h3>
+                        <p>{{ place.city }},
+                            {{ place.state }}
+                            <br/>
+                            {{ place.address }}
+                            <br/>
+                            {{ place.address2 }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+        {%else%}
+            <h4><strong>Nenhum</strong>local encontrado</h4>
+        {% endif %}
+
     </main>
 {% endblock content %}
